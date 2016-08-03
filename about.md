@@ -11,4 +11,4 @@ Starting last semester I practiced actively taking notes and writing or talking 
 Hopefully they will be quick little posts that aim to explain a concept to the average reader (done in the style of Kalid's betterexplained posts), and will end up being a nice archive for the stuff I learned in my upper level undergrad classes.
 
 
-If you are a technical recruiter looking to contact me, you can reach me using LinkedIn or email me at leigh.jia@emory.edu. Otherwise, if you are from an academics background, you might be more comfortable using [this page](/about1).
+If you are a technical recruiter looking to contact me, you can reach me using LinkedIn or email me at leigh.jia@emory.edu. Otherwise, if you are from an academics background, you might be more comfortable using [this page](/about1.html).
