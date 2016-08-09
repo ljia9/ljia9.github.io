@@ -1,0 +1,73 @@
+---
+layout: post
+title:  "Using continued fractions for square root estimation"
+date:   2016-08-08 08:27:00
+categories: [number theory, python]
+---
+As promised, here is a post explaining the fun little trick for computing continued fractions that I referenced in a previous blog post. It's best demonstrated on irrational numbers like √2 although it can be amended for rational numbers (but it's not a interesting).
+
+As I alluded to previously, it is possible to represent irrational numbers as an endless series of factions nested within themselves (which just barely avoids being a paradox with the definitions of rational and irrational but let's ignore that). And what's most interesting about this fact is that these continued fractions depend on their own definitions - that is they are self referencing - so that make nice simple formulas.
+
+To illustrate, take the number √2. We know that the decimal expansion of this number is about 1.414213562. So if we want to attempt to express this number in ratio form we can be very crudely say that √2 is about 1.5 or rather 1 + 1/2. How about a more accurate appoximation using a ratio? How about saying that √2 is about 1 + (1 / (1 + (1/2))) which turns out to be 1.4 and a much closer estimate. Let's go for another approximation and define √2 as 1 + (1 / (1 + (1 / (1 + 1/2)))). This monster nested fraction evaluates to be 1.416666 which is even closer to the real value of √2. Interesting.
+
+What is the process for building these approximations? Well, each iteration of approximating √2 involves taking our original estimation expression 1 + 1/2 and then nesting it within another estimation of 1 + 1/2 by substituting the 2 with the original expression. We keep doing it and to our pleasant surprise this process of increasingly nesting the original expression quickly approaches the irrational number √2.
+
+This result is so interesting that we want to generalize it. Because the original expression is being referenced again and again, let's initially define it as φ = 1 + 1/2. Now we want the repeatedly reference φ itself within this definition so we amend our statement to be φ = 1 + (1/ 1+φ). This new and complete definition gives us the general form of the continued fraction we are looking for, and in fact it is actually equal to √2 itself.
+
+So our ultimate expression is:
+
+>√2 = φ = 1 + (1/ 1+φ)
+
+And to convince ourselves that this actually works, let's check our statement with a little algebra.
+
+```
+φ = 1 + (1/ 1+φ)
+φ = (1+φ/ 1+φ) + (1/ 1+φ)
+φ = (2+φ) / (1+φ)
+φ(1+φ) = 2 + φ
+φ^2 + φ = 2 + φ
+φ^2 = 2
+Therefore, φ = √2
+```
+
+You should now be losing your mind over how cool that was.
+
+We are able to derive a simple continued fraction representation for the irrational number √2, and we can prove works with only a little algebra. Amazing. This leads to our next question: can we derive continued fraction representations for other irrational numbers?
+
+Give it a little a thought and you will immediately say 'Yes why not?'. And that's the right answer. We can in fact derive continued fraction representations for all irrational numbers, so there must be a general formula for finding continued fraction representations.
+
+You can play around with the outline that I have provided above and find representations for other irrational numbers (like √5 = φ = 2 + (1/2+φ) or √7 = φ = 2 + (3/2+φ)), enough to suggest a general form. After looking at the data a bit, it points to a simple pattern which we can state as the general form:
+
+>Let n be a positive integer. Let p be the integer closest to sqrt(n) rounded down. In other words, p = floor(sqrt(n)).
+>Then φ = p + (n-p*p) / (p + φ)
+
+Omg. This works. Sooooo cool.
+
+This is such a cool generalization that we ought to extend it from the realm of number theory over to programming.
+
+Suppose you are asked an interview question like "Define a method that will compute the square root of a positive number without using the built-in sqrt method and using only elementary arithmetic.". You can use the power of the general form for computing continued fractions to write such a function quite easily. In fact you might in up with something like:
+
+```python
+def estimate_sqrt(n, iteration):
+    """
+    Estimate the square root of a positive rational number n 
+    Without using math.sqrt() or any python shortcut
+    Uses a continued fraction approach
+    """
+    i = 1
+    while i*i < n:
+        i += 1
+    p = i - 1
+    x = 1.0
+    for i in xrange(iteration):
+        x = p + (n-p*p) / (p + x)
+    return x
+```
+
+Some notes about this implementation: 
+
+* We define an argument iteration to be the number of times we nest our original definition within the continued fraction which leads to a more accurate approximation. How big you want iteration to be depends on how many decimals the language's float data type will allow.
+* Here we find the value of p without calling python's built-in math functions so we use a rather inefficient way to calculate p but it uses only arithmetic. 
+* Also, you could make a fully recursive method to do the job but there isn't any real benefit and I think it is a little less intuitive since there isn't a good base case condition.
+
+Nonetheless, we have succeeded in using continued fractions to estimate the sqrt() function! There are certianly other estimator functions (like Newton's method or a whole host of stuff you find in numerical analysis), but this version is particularly satisfying because it involves using continued fractions.

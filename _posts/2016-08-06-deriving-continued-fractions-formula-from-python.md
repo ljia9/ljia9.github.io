@@ -6,7 +6,7 @@ categories: [number theory, python]
 ---
 Here is a nice math puzzle:
 
-A certain street has between 50 and 500 houses in a row, numbered 1, 2, 3, 4, … consecutively. There is a certain house on the street such that the sum of all the house numbers to the left side of it is equal to the sum of all the house numbers to its right. Find the number of this house.
+>A certain street has between 50 and 500 houses in a row, numbered 1, 2, 3, 4, … consecutively. There is a certain house on the street such that the sum of all the house numbers to the left side of it is equal to the sum of all the house numbers to its right. Find the number of this house.
 
 Now of course, like any good puzzle, there are many ways to approach this question so don't let me discourage your natural intuitive approach to the problem. But I would like to show one way to go about solving this problem. The general process involves finding sample data and then using that data to draw conclusions, computer scientists often have to do.
 
@@ -63,8 +63,6 @@ Anyways we now know that the general solution to our problem is some formula tha
 
 You can search online for this form of the number √2/2 or you can use a nice little algebra trick to solve for the number (which I will write about later) and come up with the recursive formula:
 
-```
-Φ = 1 - (1 / (2 + 2Φ)) = √2/2.
-```
+>Φ = 1 - (1 / (2 + 2Φ)) = √2/2.
 
 Now we have a complete general formula that will, given a different numbers of iterations, describe the approximation of √2/2 that we want! This final answer can be amended a bit more to fully answer the original puzzle better but this major point of this exercise is completed. We have used a process of gathering data (thanks to the power of programming) and combined it with out natural mathematical intuition to produce a sufficient generalization of the original problem.
