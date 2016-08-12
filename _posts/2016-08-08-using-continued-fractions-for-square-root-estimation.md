@@ -4,7 +4,7 @@ title:  "Using continued fractions for square root estimation"
 date:   2016-08-08 08:27:00
 categories: [number theory, python]
 ---
-As promised, here is a post explaining the fun little trick for computing continued fractions that I referenced in a previous blog post. It's best demonstrated on irrational numbers like √2 although it can be amended for rational numbers (but it's not a interesting).
+As promised, here is a post explaining the fun little trick for computing continued fractions that I referenced in a previous blog post. It's best demonstrated on irrational numbers like √2 although it can be amended for rational numbers (but it's not as interesting).
 
 As I alluded to previously, it is possible to represent irrational numbers as an endless series of factions nested within themselves (which just barely avoids being a paradox with the definitions of rational and irrational but let's ignore that). And what's most interesting about this fact is that these continued fractions depend on their own definitions - that is they are self referencing - so that make nice simple formulas.
 
