@@ -2,7 +2,7 @@
 layout: post
 title:  "BST traversals overview"
 date:   2016-08-24 8:00:00
-categories: [notes, cs theory]
+categories: [notes]
 ---
 
 Because binary search trees connect a single data point to two data points rather than another single point like in the case of arrays or linked lists, there are different ways to traverse them, that is different orders. There are three general approaches to traversing a bst, and they are all easy to code thanks to recursion.

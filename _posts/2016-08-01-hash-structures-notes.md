@@ -2,7 +2,7 @@
 layout: post
 title:  "Different hash structures"
 date:   2016-08-01 09:50:00
-categories: [notes, cs theory]
+categories: [notes]
 ---
 
 The typical hash is an associative array that does not keep some sorted order but still keeps a special index to allow for easy lookups for a key value pair. So we implement a hash function that determines that index which will store the key and val in the array. Ideally, this function works so that it will distribute the objects evenly in the array as to avoid collisions and maintain easy lookups. However it is almost certianly unavoidable (for analyical reasons i.e. the birthday problem) when we try to minimize the amount of space reserved for the array and the have a large number of items to put into it.

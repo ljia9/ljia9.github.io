@@ -2,7 +2,7 @@
 layout: post
 title:  "Continued fractions for regular ratios"
 date:   2016-08-11 09:31:00
-categories: [number theory, python]
+categories: [math, python]
 ---
 Just a quick follow up to my previous posts regarding continued fractions.
 

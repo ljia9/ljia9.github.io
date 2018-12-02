@@ -2,7 +2,7 @@
 layout: post
 title:  "Deriving continued fractions formula from python"
 date:   2016-08-06 15:31:00
-categories: [number theory, python]
+categories: [math, python]
 ---
 Here is a nice math puzzle:
 

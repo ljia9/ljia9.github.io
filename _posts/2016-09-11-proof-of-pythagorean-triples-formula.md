@@ -2,7 +2,7 @@
 layout: post
 title:  "Proof of Primative Pythagorean Triples Formula"
 date:   2016-09-11 08:50:00
-categories: [number theory]
+categories: [math]
 ---
 
 The Pythagorean Theorem states

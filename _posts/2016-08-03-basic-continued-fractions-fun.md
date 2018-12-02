@@ -2,7 +2,7 @@
 layout: post
 title:  "Proof that sqrt(2) is irrational"
 date:   2016-08-03 08:51:00
-categories: [number theory]
+categories: [math]
 ---
 
 Considered to be another good introduction into how proofs are structured and to what number theory concerns, here is the elementary proof that the square root of 2 is irrational.

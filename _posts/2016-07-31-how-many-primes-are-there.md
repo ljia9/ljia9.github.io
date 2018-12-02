@@ -2,7 +2,7 @@
 layout: post
 title:  "How many primes are there?"
 date:   2016-07-31 09:31:00
-categories: [python, number theory]
+categories: [python, math]
 ---
 
 Here's a question that makes for a great introduction to what real math is like and also what number theory deals with: how many primes are there?

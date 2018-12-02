@@ -2,7 +2,7 @@
 layout: post
 title:  "Red-black trees overview"
 date:   2016-08-22 11:50:00
-categories: [notes, cs theory]
+categories: [notes]
 ---
 
 We want to store key value pairs in some data structure that has quick look time and quick implementation i.e. logarithmic time. Well, a normal BST will do the trick but it doesn't guarentee logarithmic time. It the worst case where the insertion order is not shuffled, there can be a tree that is simply a linked listed one after the other so that lookups are O(N) time. So we should look for a better implementaiton.

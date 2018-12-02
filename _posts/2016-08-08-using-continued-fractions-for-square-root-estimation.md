@@ -2,7 +2,7 @@
 layout: post
 title:  "Using continued fractions for square root estimation"
 date:   2016-08-08 08:27:00
-categories: [number theory, python]
+categories: [math, python]
 ---
 As promised, here is a post explaining the fun little trick for computing continued fractions that I referenced in a previous blog post. It's best demonstrated on irrational numbers like √2 although it can be amended for rational numbers (but it's not as interesting).
 

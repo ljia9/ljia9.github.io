@@ -2,7 +2,7 @@
 layout: post
 title:  "Different Flavors of Fermat's Little Theorem"
 date:   2017-04-03 15:31:00
-categories: [combinatorics, number theory, groups]
+categories: [math, notes]
 ---
 I think when you study math in a formal setting it's easy to lose scope of what the actual point of what you're doing is. So you end up being absorbed in practicing computations or building the tools necessary to accomplish a single goal (like proving a theorem) or simply going through the motions of a class just because you have faith in fact that math is important and blindly studying it will make you smart.
 
