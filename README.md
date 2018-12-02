@@ -1,2 +1,4 @@
 # ljia9.github.io
-personal website/blog
+My personal website/blog.
+
+Reachable at: https://ljia9.github.io
